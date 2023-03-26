@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css'
 
 function App() {
   const [display, setDisplay] = useState('0')
@@ -66,15 +67,19 @@ function App() {
     }
   }
   return (
-    <div>
-      <div>
+    <div className='container'>
+      <div className='top'>
         <p>Calculator</p>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+        <section>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+        </section>
       </div>
-      <div>{`${stbyDisplay} ${equation}`}</div>
-      <div>{display}</div>
+      <div className='display-container'>
+        <div>{`${stbyDisplay} ${equation}`}</div>
+        <div>{display}</div>
+      </div>
     {/* {bts.map((botao) => (
       <button
         onClick={({target}) => handleNumbers(target)}
@@ -83,33 +88,35 @@ function App() {
         {botao}
       </button>
     ))} */}
-      <div>
-        <button onClick={({target}) => handleNumbers(target)}>7</button>
-        <button onClick={({target}) => handleNumbers(target)}>8</button>
-        <button onClick={({target}) => handleNumbers(target)}>9</button>
-        <button onClick={() => handleDEL()}>DEL</button>
-      </div>
-      <div>
-        <button onClick={({target}) => handleNumbers(target)}>4</button>
-        <button onClick={({target}) => handleNumbers(target)}>5</button>
-        <button onClick={({target}) => handleNumbers(target)}>6</button>
-        <button onClick={({target}) => handleEquations(target)}>+</button>
-      </div>
-      <div>
-        <button onClick={({target}) => handleNumbers(target)}>1</button>
-        <button onClick={({target}) => handleNumbers(target)}>2</button>
-        <button onClick={({target}) => handleNumbers(target)}>3</button>
-        <button onClick={({target}) => handleEquations(target)}>-</button>
-      </div>
-      <div>
-        <button onClick={() => handleDecimal()}>.</button>
-        <button onClick={({target}) => handleNumbers(target)}>0</button>
-        <button onClick={({target}) => handleEquations(target)}>/</button>
-        <button onClick={({target}) => handleEquations(target)}>x</button>
-      </div>
-      <div>
-        <button onClick={() => handleReset()}>Reset</button>
-        <button onClick={() => handleEqual()}>=</button>
+      <div className='buttons-container'>
+        <div>
+          <button onClick={({target}) => handleNumbers(target)}>7</button>
+          <button onClick={({target}) => handleNumbers(target)}>8</button>
+          <button onClick={({target}) => handleNumbers(target)}>9</button>
+          <button className='dr' onClick={() => handleDEL()}>DEL</button>
+        </div>
+        <div>
+          <button onClick={({target}) => handleNumbers(target)}>4</button>
+          <button onClick={({target}) => handleNumbers(target)}>5</button>
+          <button onClick={({target}) => handleNumbers(target)}>6</button>
+          <button onClick={({target}) => handleEquations(target)}>+</button>
+        </div>
+        <div>
+          <button onClick={({target}) => handleNumbers(target)}>1</button>
+          <button onClick={({target}) => handleNumbers(target)}>2</button>
+          <button onClick={({target}) => handleNumbers(target)}>3</button>
+          <button onClick={({target}) => handleEquations(target)}>-</button>
+        </div>
+        <div>
+          <button onClick={() => handleDecimal()}>.</button>
+          <button onClick={({target}) => handleNumbers(target)}>0</button>
+          <button onClick={({target}) => handleEquations(target)}>/</button>
+          <button onClick={({target}) => handleEquations(target)}>x</button>
+        </div>
+        <div>
+          <button className='dr' onClick={() => handleReset()}>Reset</button>
+          <button className='equal-color' onClick={() => handleEqual()}>=</button>
+        </div>
       </div>
     </div>
   );

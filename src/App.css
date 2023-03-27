@@ -4,8 +4,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --one: #3A4663;
+  --two: #181F33;
+  --btsDr: #647198;
+  --btEqual: #D03F2F;
+}
+
 body {
-  background-color: #3A4663;
+  background-color: var(--one);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -13,7 +20,7 @@ body {
 }
 div.container {
   width: 90vw;
-  background-color: #3A4663;
+  background-color: var(--one);
   height: auto;
   margin: 0;
   display: flex;
@@ -29,7 +36,7 @@ div.container {
 
 .display-container {
   display: flex;
-  background-color: #181F33;
+  background-color: var(--two);
   width: 70vw;
   color: white;
   font-weight: bold;
@@ -38,7 +45,14 @@ div.container {
   height: 3rem;
 }
 
-.buttons-container {
+.buttons-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+/* .buttons-container {
   margin-top: 1.4rem;
   background-color: #181F33;
   width: 70vw;
@@ -48,12 +62,19 @@ div.container {
   background-color: #FFFFFF;
   width: 15vw;
   font-weight: bold;
-}
+} */
 
 .dr {
-  background-color: #647198 !important;
+  background-color: var(--btsDr) !important;
+}
+
+.reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .equal-color {
-  background-color: #D03F2F !important;
+  background-color: var(--btEqual) !important;
+  grid-column-start: 3;
+  grid-column-end: 5;
 }

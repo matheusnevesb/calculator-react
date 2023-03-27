@@ -8,9 +8,9 @@ function App() {
   // const [theme, setTheme] = useState(1)
   // const bts = ['7','8', '9', 'DEL', '4', '5', '6', '+', '1', '2', '3', '-', '.', '0', '/', 'x', 'reset', '=']
   const themas = [
-    ['#3A4663','#181F33','#647198','#D03F2F'],
-    ['#E6E6E6', '#FFFFFF', '#378187', '#C85402'],
-    ['#17062A', '#1E0936', '#56077C', '#00DED0']
+    ['#3A4663','#181F33','#647198','#D03F2F', '#FFFFFF', '#434A59', '#EAE3DC', '#FFFFFF'],
+    ['#E6E6E6', '#FFFFFF', '#378187', '#C85402', '#FFFFFF', '#36362C', '#E5E4E1', '#36362C'],
+    ['#17062A', '#1E0936', '#56077C', '#00DED0', '#FFFFFF', '#FFE53D', '#331C4D', '#FFE53D']
   ]
   function handleNumbers(target) {
     const numero = target.innerText;
@@ -79,6 +79,9 @@ function App() {
     document.documentElement.style.setProperty('--two', color[1]);
     document.documentElement.style.setProperty('--btsDr', color[2]);
     document.documentElement.style.setProperty('--btEqual', color[3]);
+    document.documentElement.style.setProperty('--font-01', color[4]);
+    document.documentElement.style.setProperty('--font-02', color[5]);
+    document.documentElement.style.setProperty('--btnBackGround', color[6]);
   }
   return (
     <div className='container'>
@@ -92,7 +95,7 @@ function App() {
       </div>
       <div className='display-container'>
         <div>{`${stbyDisplay} ${equation}`}</div>
-        <div>{display}</div>
+        <div className='display'>{display}</div>
       </div>
       {/* {bts.map((botao) => (
       <button

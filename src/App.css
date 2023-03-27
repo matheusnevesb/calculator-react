@@ -9,6 +9,10 @@
   --two: #181F33;
   --btsDr: #647198;
   --btEqual: #D03F2F;
+  --font-01: #FFFFFF;
+  --font-02: #434A59;
+  --btnBackGround: #EAE3DC;
+  --font-display: #FFFFFF;
 }
 
 body {
@@ -29,27 +33,73 @@ div.container {
 }
 
 .top {
+  width: 530px;
   display: flex;
-  justify-content: space-around;
-  color: white;
+  /* gap: 100px; */
+  justify-content: space-between;
+  align-items: center;
+  color: var(--font-01);
+}
+
+.top p {
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.top section {
+  display: flex;
+  gap: 10px;
+}
+
+.top button {
+  width: 30px;
+  background-color: var(--btnBackGround);
+  border: none;
+  color: var(--font-02);
+  font-weight: bold;
 }
 
 .display-container {
   display: flex;
   background-color: var(--two);
-  width: 70vw;
-  color: white;
+  width: 540px;
+  color: var(--font-01);
   font-weight: bold;
   flex-direction: column;
   align-items: end;
-  height: 3rem;
+  height: 128px;
+  gap: .5rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.display {
+  font-size: 52px;
+  font-weight: bold;
+  color: var(--font-display);
 }
 
 .buttons-container-grid {
+  background-color: var(--two);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  gap: 5px;
+  gap: 1rem;
+  width: 540px;
+  height: 480px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.buttons-container-grid button {
+  color: var(--font-02);
+  background-color: var(--btnBackGround);
+  border: none;
+  border-radius: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  /* width: 101px;
+  height: 64px; */
 }
 
 /* .buttons-container {
@@ -66,6 +116,7 @@ div.container {
 
 .dr {
   background-color: var(--btsDr) !important;
+  color: var(--font-01) !important;
 }
 
 .reset {
@@ -77,4 +128,5 @@ div.container {
   background-color: var(--btEqual) !important;
   grid-column-start: 3;
   grid-column-end: 5;
+  color: var(--font-01) !important;
 }

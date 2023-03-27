@@ -63,7 +63,7 @@ div.container {
   display: flex;
   background-color: var(--two);
   width: 540px;
-  color: var(--font-01);
+  color: var(--font-display);
   font-weight: bold;
   flex-direction: column;
   align-items: end;

@@ -87,6 +87,7 @@ function App() {
     document.documentElement.style.setProperty('--font-01', color[4]);
     document.documentElement.style.setProperty('--font-02', color[5]);
     document.documentElement.style.setProperty('--btnBackGround', color[6]);
+    document.documentElement.style.setProperty('--font-display', color[7]);
   }
   function handleKey(e) {
     // console.log('apertou');
@@ -133,9 +134,9 @@ function App() {
         setEquation('-');
       }
     }else if(e.code === 'Period') {
-      handleDecimal()
+      handleDecimal();
     }else if (e.code === 'Enter') {
-      handleEqual()
+      handleEqual();
     }
   }
   return (

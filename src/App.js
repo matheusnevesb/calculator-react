@@ -13,7 +13,12 @@ function App() {
     ['#17062A', '#1E0936', '#56077C', '#00DED0', '#FFFFFF', '#FFE53D', '#331C4D', '#FFE53D']
   ]
   function handleNumbers(target) {
-    const numero = target.innerText;
+    let numero = undefined;
+    if(typeof target === 'number') {
+      numero = target;
+    }else {
+      numero = target.innerText;
+    }
     if (display === 0) {
       setDisplay(numero);
     } else {
@@ -83,8 +88,58 @@ function App() {
     document.documentElement.style.setProperty('--font-02', color[5]);
     document.documentElement.style.setProperty('--btnBackGround', color[6]);
   }
+  function handleKey(e) {
+    // console.log('apertou');
+    console.log(e.code);
+    if(e.code.includes('Digit')) {
+      // console.log(typeof Number(e.code[5]));
+      handleNumbers(Number(e.code[5]))
+    }else if (e.code === 'Backspace') {
+      handleDEL();
+    }else if (e.code === 'KeyX') {
+      // setStbyDisplay(display);
+      // setDisplay('0');
+      // setEquation(e.code[3]);
+      if (equation === '') {
+        setStbyDisplay(display);
+        setDisplay('0');
+        setEquation('x');
+      }
+      else {
+        setEquation('x');
+      }
+    }else if (e.code === 'Slash') {
+      // setStbyDisplay(display);
+      // setDisplay('0');
+      // setEquation('/');
+      if (equation === '') {
+        setStbyDisplay(display);
+        setDisplay('0');
+        setEquation('/');
+      }
+      else {
+        setEquation('/');
+      }
+    }else if (e.code === 'Minus') {
+      // setStbyDisplay(display);
+      // setDisplay('0');
+      // setEquation('-');
+      if (equation === '') {
+        setStbyDisplay(display);
+        setDisplay('0');
+        setEquation('-');
+      }
+      else {
+        setEquation('-');
+      }
+    }else if(e.code === 'Period') {
+      handleDecimal()
+    }else if (e.code === 'Enter') {
+      handleEqual()
+    }
+  }
   return (
-    <div className='container'>
+    <div className='container' onKeyDown={(e) => handleKey(e)} tabIndex={0}>
       <div className='top'>
         <p>Calculator</p>
         <section>

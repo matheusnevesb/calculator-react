@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/app-toot-name/static/css/main.844ffa35.css",
-    "main.js": "/app-toot-name/static/js/main.de7d821b.js",
-    "static/js/787.207e0cf3.chunk.js": "/app-toot-name/static/js/787.207e0cf3.chunk.js",
-    "index.html": "/app-toot-name/index.html",
-    "main.844ffa35.css.map": "/app-toot-name/static/css/main.844ffa35.css.map",
-    "main.de7d821b.js.map": "/app-toot-name/static/js/main.de7d821b.js.map",
-    "787.207e0cf3.chunk.js.map": "/app-toot-name/static/js/787.207e0cf3.chunk.js.map"
+    "main.css": "//matheusnevesb.github.io/calculator-react/static/css/main.844ffa35.css",
+    "main.js": "//matheusnevesb.github.io/calculator-react/static/js/main.77e84288.js",
+    "static/js/787.207e0cf3.chunk.js": "//matheusnevesb.github.io/calculator-react/static/js/787.207e0cf3.chunk.js",
+    "index.html": "//matheusnevesb.github.io/calculator-react/index.html",
+    "main.844ffa35.css.map": "//matheusnevesb.github.io/calculator-react/static/css/main.844ffa35.css.map",
+    "main.77e84288.js.map": "//matheusnevesb.github.io/calculator-react/static/js/main.77e84288.js.map",
+    "787.207e0cf3.chunk.js.map": "//matheusnevesb.github.io/calculator-react/static/js/787.207e0cf3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.844ffa35.css",
-    "static/js/main.de7d821b.js"
+    "static/js/main.77e84288.js"
   ]
 }

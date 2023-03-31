@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 
 function App() {
@@ -12,6 +12,9 @@ function App() {
     ['#E6E6E6', '#FFFFFF', '#378187', '#C85402', '#FFFFFF', '#36362C', '#E5E4E1', '#36362C'],
     ['#17062A', '#1E0936', '#56077C', '#00DED0', '#FFFFFF', '#FFE53D', '#331C4D', '#FFE53D']
   ]
+  useEffect(() => {
+    document.title = 'Calculator ';
+  }, [])
   function handleNumbers(target) {
     let numero = undefined;
     if(typeof target === 'number') {

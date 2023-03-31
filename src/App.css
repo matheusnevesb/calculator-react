@@ -131,3 +131,13 @@ div.container {
   grid-column-end: 5;
   color: var(--font-01) !important;
 }
+
+@media only screen and (max-width: 612px ) {
+  .top {
+    width: 320px;
+  }
+
+  .display-container, .buttons-container-grid {
+    width: 327px;
+  }
+}
